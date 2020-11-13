@@ -29,15 +29,13 @@ class UserInterface
             puts "______________"
                     board
             puts "______________"
-            puts "#{player1} Playing..."
-
-           
+            puts "#{player1}: #{symbol} Playing..."
 
             player1_move = gets.chomp
             else
             puts "invalid symbol you can only choose X or O"
             player1_move = gets.chomp
-            puts "#{player1} Playing..."
+            puts "#{player1}: #{symbol} Playing..."
 
             puts "______________"
                     board

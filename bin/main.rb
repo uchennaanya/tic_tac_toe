@@ -30,20 +30,20 @@ end
 
 =end
 class UserInterface
+
     def initialize
         @cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        @symbol = ['o', 'x']
     end
 
     def board
         puts <<-HEREDOC
-    
+
             #{@cells[0]}  | #{@cells[1]} | #{@cells[2]}
             ---+---+---
             #{@cells[3]}  | #{@cells[4]} | #{@cells[5]}
             ---+---+---
             #{@cells[6]}  | #{@cells[7]} | #{@cells[8]}
-    
+
         HEREDOC
     end
 
@@ -65,21 +65,21 @@ class UserInterface
 
             puts symbol == "x" ? player_2 = "#{player_2}'s symbol: o" : player_2 = "#{player_2}'s symbol: x"
             moves = 0
-            while moves > @cells.size do
-                player_1 = gets.chomp
+            while moves < @cells.size-1 do
+                moves += 2
             board
-            
             puts "#{player_1} Please select any available number to be replaced by #{symbol}"
+                player_1 = gets.chomp
 
             board
+
                 player_2 = gets.chomp
+
             puts "#{player_2} select any available number to be replaced by #{symbol == 'x' ? player_2 = 'o' : player_2 = 'x'} "
             end
-            else
-                puts "GAME OVER"
-            end
-
+        else
             puts "invalid symbol you can only choose X or O"
+
             puts "#{player_1}'s symbol: #{symbol}"
             puts "Player #2 your name:"
             player_2 = gets.chomp
@@ -89,6 +89,7 @@ class UserInterface
             board
         end
     end
+end
 
 userinterface = UserInterface.new
 userinterface.players

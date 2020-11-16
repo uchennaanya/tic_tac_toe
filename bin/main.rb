@@ -1,38 +1,12 @@
 #!/usr/bin/env ruby
-=begin
- Add github action's linting configuration files (.github/workflow/*) to setup github action
- The game should inform the player if the selected move is invalid (without computing what an invalid move is)
- The game should inform the player if the selected move is a winning move (without computing the winning move)
- The game should inform the players if the selected move is a draw move (without computing draw)
- The game should repeat all actions for the next player's move
- A loop is needed in this game (recommended is while but anything else will do) (OdinProject hint)
- A loop needs to be terminated at some point (after a winning move or draw to be more specific). I recommend you use a conditional variable for the while loop.
-Example:
-game_on = true
 
-# initial instructions for player
-
-while game_on
-
-  # loop for each move
-
-  if winner # and/or draw (the exact condition in this milestone is not important)
-
-    game_on = false
-
-  end
-
-end
-
-[OPTIONAL]
-
- When you start a new milestone, start on the top of the last milestone branch, e.g., run git checkout -b new_milestone inside the last_milestone branch
-
-=end
 class UserInterface
 
     def initialize
         @cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        @moves = 0
+        @player_2_sym = "o"
+        @player_1_sym = "x"
     end
 
     def board
@@ -54,37 +28,39 @@ class UserInterface
     
     puts "Please choose a symbol (X or O) #{player_1}"
 
-    symbol = gets.chomp
+    @player_1_sym = gets.chomp
         
-        if symbol == "x" || symbol == "o"
+        if @player_1_sym == "x" || @player_1_sym == "o"
            
-            puts "#{player_1}'s symbol: #{symbol}"
+            puts "#{player_1}'s symbol: #{@player_1_sym}"
             
             puts "Player #2 your name:"
-            player_2 = gets.chomp
+            @player_2 = gets.chomp
 
-            puts symbol == "x" ? player_2 = "#{player_2}'s symbol: o" : player_2 = "#{player_2}'s symbol: x"
-            moves = 0
-            while moves < @cells.size-1 do
-                moves += 2
+            puts @player_1_sym == "x" ? player_2 = @player_2 + "'s symbol: o" : player_2 = @player_2 + "'s symbol: x"
+            
+            while @moves < @cells.size-1 do
+                
             board
-            puts "#{player_1} Please select any available number to be replaced by #{symbol}"
-                player_1 = gets.chomp
+            puts "player #1 Please select a number (0-9) to be replaced by #{@player_1_sym}"
+                player_1_move = gets.chomp
 
             board
+            
+            puts "Player #2 please select a (0-9) number to be replaced by #{@player_1_sym == 'x' ? @player_2_sym = 'o' : @player_2_sym = 'x'} "
+                player_2_move = gets.chomp
 
-                player_2 = gets.chomp
-
-            puts "#{player_2} select any available number to be replaced by #{symbol == 'x' ? player_2 = 'o' : player_2 = 'x'} "
+            @moves += 2
             end
+            puts "GAME OVER!"
         else
             puts "invalid symbol you can only choose X or O"
 
-            puts "#{player_1}'s symbol: #{symbol}"
+            puts "#{player_1}'s symbol: #{@player_1_sym}"
             puts "Player #2 your name:"
             player_2 = gets.chomp
 
-            puts "#{player_1} Please select any available number to be replace by #{symbol}"
+            puts "#{player_1} Please select any available number to be replace by #{player_1_sym}"
 
             board
         end

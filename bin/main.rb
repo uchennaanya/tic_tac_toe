@@ -6,8 +6,8 @@ class UserInterface
     @moves = 0
     @player2sym = 'o'
     @player1sym = 'x'
-    @winingMove = 0
-    @invalidMove = 0
+    @winingmove = 0
+    @invalidmove = ''
     @draw = 0
   end
 
@@ -24,18 +24,14 @@ class UserInterface
   end
 
   def playermoves
-
-    invalidMove = true
-
     while @moves < @cells.size - 1
       board
       puts "player #1 Please select a number (0-9) to be replaced by #{@player1sym}"
-      gets.chomp
+      gets.chomp.to_i
 
       board
       puts 'Player #2 please select a (0-9) number to be replaced by ' + @player2sym = @player1sym == 'x' ? 'o' : 'x'
-      gets.chomp
-
+      gets.chomp.to_i
       @moves += 2
     end
   end

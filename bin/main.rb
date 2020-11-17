@@ -33,7 +33,6 @@ class UserInterface
 
       @moves += 2
     end
-    puts 'GAME OVER!'
   end
 
   def players
@@ -53,6 +52,7 @@ class UserInterface
 
       puts @player1sym == 'x' ? "#{player2}'s symbol: o" : "#{player2}'s symbol: x"
       playermoves
+      puts 'GAME OVER!'
     else
       puts 'invalid symbol you can only choose X or O'
       @player1sym = gets.chomp
@@ -60,8 +60,10 @@ class UserInterface
 
       puts 'Player #2 your name:'
       gets.chomp
+      playermoves
+
     end
-    playermoves
+    puts 'GAME OVER!'
   end
 end
 

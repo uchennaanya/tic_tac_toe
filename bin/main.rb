@@ -1,18 +1,5 @@
 #!/usr/bin/env ruby
 
-# Your game is required to inform if the selected move is invalid (without computing what an invalid move is).
-# One way you can achieve this is by storing a particular number to a variable and if a player
-# chooses that number you can tell them that the move is invalid.
-# This is just to mock the basic flow of the game and those not require any logic.
-# Linter check is failing which means there are some lint errors, please check and correct those errors.
-# The game should inform the player if the selected move is a winning move.
-# or a draw (without computing the winning move).
-# Just like I stated above you can assign a particular number to a variable and if that number is chosen
-# you can assume that the game is won or it is a draw.
-# Once you are done with the changes, please request another review.
-# Happy coding
-# slack(@ebeagusamuel)
-
 class UserInterface
   def initialize
     @cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]

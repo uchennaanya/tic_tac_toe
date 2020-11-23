@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+
+require_relative '../lib/logic.rb'
+
 class Interface
   def initialize
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -17,7 +20,6 @@ class Interface
     HEREDOC
   end
 
-  
   def welcome_title
     puts <<-HEREDOC
       -------------How to Play------------------------

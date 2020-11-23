@@ -9,7 +9,6 @@ class Interface
     @player2 = nil
   end
 
-  # METHODS
   def display_board(_board)
     puts <<-HEREDOC
       #{@board[0]} | #{@board[1]} | #{@board[2]}
@@ -82,10 +81,8 @@ class Interface
       position = gets.chomp.to_i
       position = validate_position(position, @board)
 
-      # Update board with current player's symbol
       @board[position - 1] = active_player == @player1 ? 'X' : 'O'
 
-      # Stop if
       if win?(@board)
         display_board(@board)
         puts 'Congratulations!'
@@ -97,7 +94,6 @@ class Interface
         break
       end
 
-      # Show updated board
       display_board(@board)
       active_player = active_player == @player1 ? @player2 : @player1
     end

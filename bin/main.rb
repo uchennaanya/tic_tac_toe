@@ -1,8 +1,11 @@
 #!/usr/bin/env ruby
 class Interface
+  attr_accessor :position
   def initialize
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @player1 = nil
+    @winner = 9
+    @draw = 0
     @player2 = nil
   end
 
@@ -18,23 +21,13 @@ class Interface
   end
 
   def draw?(board)
+
     board.all? { |i| i.is_a?(String) }
   end
 
   def win?(board)
-    combinations = [
-      [board[0], board[1], board[2]],
-      [board[3], board[4], board[5]],
-      [board[6], board[7], board[8]],
-      [board[0], board[3], board[6]],
-      [board[1], board[4], board[7]],
-      [board[2], board[5], board[8]],
-      [board[0], board[4], board[8]],
-      [board[2], board[4], board[6]]
-    ]
-    combinations.any? do |combo|
-      combo.all? { |i| i == 'X' } || combo.all? { |i| i == 'O' }
-    end
+
+    return "Winner!" if self.position == 9
   end
 
   def welcome_title
@@ -116,7 +109,7 @@ class Interface
 
       # Show updated board
       display_board(@board)
-      active_player = active_player == @player1 ? @player2 : @player1
+      puts "You won!"
     end
   end
 end

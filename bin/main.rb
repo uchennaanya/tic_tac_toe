@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
 class Interface
-  attr_accessor :position
   def initialize
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @player1 = nil
-    @winner = 9
-    @draw = 0
     @player2 = nil
   end
 
@@ -20,14 +17,7 @@ class Interface
     HEREDOC
   end
 
-  def draw?(board)
-    board.all? { |i| i.is_a?(String) }
-  end
-
-  def win?(_board)
-    return 'Winner!' if position == 9
-  end
-
+  
   def welcome_title
     puts <<-HEREDOC
       -------------How to Play------------------------
@@ -107,7 +97,7 @@ class Interface
 
       # Show updated board
       display_board(@board)
-      puts 'You won!'
+      active_player = active_player == @player1 ? @player2 : @player1
     end
   end
 end

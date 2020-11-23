@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 class Interface
-  attr_accessor :active_player
   def initialize
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @player1 = nil
@@ -90,14 +89,7 @@ class Interface
     puts "#{@player1} will be using 'X', while #{@player2} will be using 'O'"
   end
 
-  def finished
-    display_board(@board)
-    active_player == @player1 ? @player2 : @player1
-  end
-
   def play
-    info
-
     display_board(@board)
     active_player = @player1
 
@@ -123,10 +115,12 @@ class Interface
       end
 
       # Show updated board
-      finished
+      display_board(@board)
+      active_player = active_player == @player1 ? @player2 : @player1
     end
   end
 end
 
 interface = Interface.new
+interface.info
 interface.play

@@ -21,13 +21,11 @@ class Interface
   end
 
   def draw?(board)
-
     board.all? { |i| i.is_a?(String) }
   end
 
-  def win?(board)
-
-    return "Winner!" if self.position == 9
+  def win?(_board)
+    return 'Winner!' if position == 9
   end
 
   def welcome_title
@@ -109,7 +107,7 @@ class Interface
 
       # Show updated board
       display_board(@board)
-      puts "You won!"
+      puts 'You won!'
     end
   end
 end

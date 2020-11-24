@@ -2,8 +2,12 @@
 
 require_relative '../lib/logic.rb'
 
+# disable: Metrics/MethodLength
+
 class Interface
+  attr_accessor :gamelogic
   def initialize
+    self.gamelogic = GameLogic.new
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @player1 = nil
     @player2 = nil
@@ -53,8 +57,11 @@ class Interface
       break if (1..9).include?(position) && !board[position - 1].is_a?(String)
 
       puts 'Please enter a valid number from 1 to 9 to be replaced by your symbol' unless (1..9).include?(position)
+
+      position = gets.chomp.to_i
+
       puts 'Position already taken , Please choose another: '
-      position = gets.chomp.to_i if board[position - 1].is_a?(String)
+      position = gets.chomp.to_i
     end
     position
   end
@@ -74,7 +81,6 @@ class Interface
   def play
     display_board(@board)
     active_player = @player1
-
     loop do
       puts "#{active_player}: Choose a poistion"
 
@@ -83,12 +89,12 @@ class Interface
 
       @board[position - 1] = active_player == @player1 ? 'X' : 'O'
 
-      if win?(@board)
+      if gamelogic.win?(@board)
         display_board(@board)
         puts 'Congratulations!'
         puts "#{active_player} is the winner!"
         break
-      elsif draw?(@board)
+      elsif gamelogic.draw?(@board)
         display_board(@board)
         puts 'the game is a tie, try again'
         break
@@ -101,5 +107,8 @@ class Interface
 end
 
 interface = Interface.new
+
 interface.info
 interface.play
+
+# enable: Metrics/MethodLength

@@ -18,9 +18,9 @@
 
 <!-- This project is based on the . -->
 
-This Project is about Building Tic-tac-toe game using OOP concept of Ruby.
-Tic-Tac-Toe game is paper-pen game which requires two players to play game, Player1 can be 'X' and player2 can be 'O'. It uses 3X3 grids which has 9 moves for both players to complete the Game.
-Any one of the player can win the game if he/she has got all 'X' or 'O' in any one of the possible position i.e first Row, Middle Row, last Row, First Column, Middle Column, last column, left Diagonal and Right Diagonal.
+This Project is about Building a Tic-tac-toe game using the OOP concept of Ruby.
+Tic-Tac-Toe game is a paper-pen game which requires two players to play the game, Player1 can be 'X' and player2 can be 'O'. It uses 3X3 grids which has 9 moves for both players to complete the Game.
+Anyone of the player can win the game if he/she has got all 'X' or 'O' in any one of the possible positions i.e first Row, Middle Row, last Row, First Column, Middle Column, last column, left Diagonal, and Right Diagonal.
 This project requires to complete the following milestones:
 
 - OOP-Milestone: Setup

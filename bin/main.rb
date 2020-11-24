@@ -1,15 +1,18 @@
 #!/usr/bin/env ruby
+
+require_relative '../lib/logic.rb'
+
+# disable: Metrics/MethodLength
+
 class Interface
-  attr_accessor :position
+  attr_accessor :gamelogic
   def initialize
+    self.gamelogic = GameLogic.new
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     @player1 = nil
-    @winner = 9
-    @draw = 0
     @player2 = nil
   end
 
-  # METHODS
   def display_board(_board)
     puts <<-HEREDOC
       #{@board[0]} | #{@board[1]} | #{@board[2]}
@@ -18,14 +21,6 @@ class Interface
       -----------
       #{@board[6]} | #{@board[7]} | #{@board[8]}
     HEREDOC
-  end
-
-  def draw?(board)
-    board.all? { |i| i.is_a?(String) }
-  end
-
-  def win?(_board)
-    return 'Winner!' if position == 9
   end
 
   def welcome_title
@@ -62,8 +57,11 @@ class Interface
       break if (1..9).include?(position) && !board[position - 1].is_a?(String)
 
       puts 'Please enter a valid number from 1 to 9 to be replaced by your symbol' unless (1..9).include?(position)
+
+      position = gets.chomp.to_i
+
       puts 'Position already taken , Please choose another: '
-      position = gets.chomp.to_i if board[position - 1].is_a?(String)
+      position = gets.chomp.to_i
     end
     position
   end
@@ -83,35 +81,34 @@ class Interface
   def play
     display_board(@board)
     active_player = @player1
-
     loop do
       puts "#{active_player}: Choose a poistion"
 
       position = gets.chomp.to_i
       position = validate_position(position, @board)
 
-      # Update board with current player's symbol
       @board[position - 1] = active_player == @player1 ? 'X' : 'O'
 
-      # Stop if
-      if win?(@board)
+      if gamelogic.win?(@board)
         display_board(@board)
         puts 'Congratulations!'
         puts "#{active_player} is the winner!"
         break
-      elsif draw?(@board)
+      elsif gamelogic.draw?(@board)
         display_board(@board)
         puts 'the game is a tie, try again'
         break
       end
 
-      # Show updated board
       display_board(@board)
-      puts 'You won!'
+      active_player = active_player == @player1 ? @player2 : @player1
     end
   end
 end
 
 interface = Interface.new
+
 interface.info
 interface.play
+
+# enable: Metrics/MethodLength

@@ -11,9 +11,9 @@
 
 
   
-<img src="https://camo.githubusercontent.com/1978d5152fd64b77a063de26e1934387406c4833a7c40e77c930394902494a72/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f496a6179416262792f5469632d5461632d546f653f7374796c653d666f722d7468652d6261646765" alt="issues" >
-<img src="https://camo.githubusercontent.com/3dae00cdbe361ddf6a49793c20c034673930cbf70fe64f8627152bde5eb3ef2f/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f756368656e6e61616e79612f5469632d5461632d546f653f7374796c653d666f722d7468652d6261646765" alt="Licence" >
-<img src="https://camo.githubusercontent.com/673d46c97b5d715c5ce61973c3b4ba370240971d6578553fa7789a37d01be04b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d70722f756368656e6e61616e79612f5469632d5461632d546f653f7374796c653d666f722d7468652d6261646765" alt="pull request" >
+<img src="https://img.shields.io/github/issues/uchennaanya/tic_tac_toe?style=for-the-badge" alt="issues" >
+<img src="https://img.shields.io/github/license/uchennaanya/tic_tac_toe?style=for-the-badge" alt="Licence" >
+<img src="https://img.shields.io/github/issues-pr/uchennaanya/tic_tac_toe?style=for-the-badge" alt="pull request" >
 
 
 </p>

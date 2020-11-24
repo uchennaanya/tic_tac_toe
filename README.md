@@ -2,23 +2,17 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-
  <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/200px-Tic_tac_toe.svg.png" alt="img" >
  </p>
 
-<p align="center"> 
+<p align="center">
 
-
-  
 <img src="https://img.shields.io/github/issues/uchennaanya/tic_tac_toe?style=for-the-badge" alt="issues" >
 <img src="https://img.shields.io/github/license/uchennaanya/tic_tac_toe?style=for-the-badge" alt="Licence" >
 <img src="https://img.shields.io/github/issues-pr/uchennaanya/tic_tac_toe?style=for-the-badge" alt="pull request" >
 
-
 </p>
-
-
 
 ## About the Project
 
@@ -50,10 +44,9 @@ This project requires to complete the following milestones:
 
 - [Ruby](https://www.ruby-lang.org/en/)
 
-
 ## Live Demo
 
-[Live Demo Link](https://repl.it/@IjayAbby/Tic-Tac-Toe)
+[Live Demo Link](https://repl.it/@uchennaanya/tictactoe#.replit)
 
 ## Getting Started
 
@@ -63,8 +56,7 @@ To get a local copy up and running follow these simple steps.
 
 2. Copy and paste the following code into the Terminal:
 
-
-   ``` git clone https://github.com/uchennaanya/Tic-Tac-Toe.git ```
+   `git clone https://github.com/uchennaanya/tic_tac_toe.git`
 
 3. Press Enter.
 
@@ -72,10 +64,11 @@ To get a local copy up and running follow these simple steps.
 
 5. Enjoy
 
-
 ## Game Instructions
+
 Tic-Tac-Toe is a very popular game, which consists in making a sequence of three symbols in either a row, column or diagonal in a 3x3 board.
 To play the game follow the getting started steps mentioned above this file. After you done that, run the main file and follow these steps:
+
 - The game displays a welcome note on top.
 - You will be prompted as a first player to enter your preferred name.
 - You will be prompted as a second player to enter your preferred name.
@@ -85,8 +78,9 @@ To play the game follow the getting started steps mentioned above this file. Aft
 - If you want to play again you can restart the game.
 
 **To test the code with rspec.**
-  - install rspec using `gem install rspec` 
-  - run `rspec` or `rspec --format doc` on your terminal to test the code .
+
+- install rspec using `gem install rspec`
+- run `rspec` or `rspec --format doc` on your terminal to test the code .
 
 ## Contributing
 
@@ -101,16 +95,13 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](https://github.com/uchennaanya/Tic-Tac-Toe/blob/feature/LICENSE) licensed.
 
-
 ## Authors
-
 
 👤 **Uchenna Anya**
 
 - GitHub: [uchennaanya](https://github.com/uchennaanya)
 - Twitter: [@martinsanya19](https://twitter.com/martinsanya19)
 - LinkedIn: [uchenna Anya](https://www.linkedin.com/in/uchenna-anya)
-
 
 ## Acknowledgments
 

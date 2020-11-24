@@ -8,8 +8,10 @@
  </p>
 
 <p align="center"> 
+
+
   
-<img src="https://img.shields.io/github/issues/uchennaanya/Tic-Tac-Toe?style=for-the-badge" alt="issues" >
+<img src="https://camo.githubusercontent.com/1978d5152fd64b77a063de26e1934387406c4833a7c40e77c930394902494a72/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f496a6179416262792f5469632d5461632d546f653f7374796c653d666f722d7468652d6261646765" alt="issues" >
 <img src="https://img.shields.io/github/license/uchennaanya/Tic-Tac-Toe?style=for-the-badge" alt="Licence" >
 <img src="https://img.shields.io/github/issues-pr/uchennaanya/Tic-Tac-Toe?style=for-the-badge" alt="pull request" >
 

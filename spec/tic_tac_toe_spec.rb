@@ -1,4 +1,4 @@
-require '../lib/logic.rb'
+require_relative '../lib/logic.rb'
 
 describe GameLogic do
   let(:board) { [1, 2, 3, 4, 5, 6, 7, 8, 9] }

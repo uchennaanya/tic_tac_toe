@@ -64,6 +64,9 @@ To get a local copy up and running follow these simple steps.
 
 5. Enjoy
 
+6. install rspec using `gem install rspec`
+7. run `rspec` or `rspec --format doc` on your terminal to test the code .
+
 ## Game Instructions
 
 Tic-Tac-Toe is a very popular game, which consists in making a sequence of three symbols in either a row, column or diagonal in a 3x3 board.
@@ -76,24 +79,6 @@ To play the game follow the getting started steps mentioned above this file. Aft
 - You will be provided with the choices you can pick from the board that is, between 1 - 9.
 - You will play in turns, in sequence till the board is full then it will announce the game results ie, draw or winner.
 - If you want to play again you can restart the game.
-
-**To test the code with rspec.**
-
-- install rspec using `gem install rspec`
-- run `rspec` or `rspec --format doc` on your terminal to test the code .
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](../../issues).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## License
-
-This project is [MIT](https://github.com/uchennaanya/Tic-Tac-Toe/blob/feature/LICENSE) licensed.
 
 ## Authors
 
@@ -108,6 +93,19 @@ This project is [MIT](https://github.com/uchennaanya/Tic-Tac-Toe/blob/feature/LI
 - Github: [ArreyTabe](https://github.com/ArreyTabe)
 - Twitter: [@tabe_arrey](https://twitter.com/tabe_arrey)
 - LinkedIn: [Arrey Affuembey](https://www.linkedin.com/in/arrey-affuembey-80a8b11a8/)
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## License
+
+This project is [MIT](https://github.com/uchennaanya/Tic-Tac-Toe/blob/feature/LICENSE) licensed.
 
 ## Acknowledgments
 

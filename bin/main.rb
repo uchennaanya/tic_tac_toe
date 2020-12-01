@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/logic.rb'
+require_relative '../lib/logic'
 
 # disable: Metrics/MethodLength
 
 class Interface
   attr_accessor :gamelogic
+
   def initialize
     self.gamelogic = GameLogic.new
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]

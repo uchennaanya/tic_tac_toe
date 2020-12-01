@@ -11,12 +11,12 @@ describe GameLogic do
     end
   end
   describe '#win?' do
-    it 'checks if any combination is met if yes returns win else returns tie otherwise' do
+    it 'checks if any combination is true' do
       expect(gamelogic.win?(board)).to eq(false)
     end
   end
   describe '#win?' do
-    it 'checks if any combination is met if yes returns win else returns tie otherwise' do
+    it 'checks if any combination is false' do
       expect(gamelogic.win?(board)).to_not eq(true)
     end
   end

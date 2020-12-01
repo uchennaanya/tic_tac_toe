@@ -99,7 +99,7 @@ class Interface
         puts 'the game is a tie, try again'
         break
       end
-
+      
       display_board(@board)
       active_player = active_player == @player1 ? @player2 : @player1
     end

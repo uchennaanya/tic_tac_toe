@@ -1,4 +1,4 @@
-require_relative '../lib/logic.rb'
+require_relative '../lib/logic'
 
 describe GameLogic do
   let(:board) { [1, 2, 3, 4, 5, 6, 7, 8, 9] }
@@ -14,10 +14,9 @@ describe GameLogic do
     it 'checks if any combination is true' do
       expect(gamelogic.win?(board)).to eq(false)
     end
-  end
-  describe '#win?' do
-    it 'checks if any combination is false' do
-      expect(gamelogic.win?(board)).to_not eq(true)
-    end
+    describe '#win?' do
+      it 'checks if any combination is false' do
+        expect(gamelogic.win?(board)).to_not eq(true)
+      end
   end
 end

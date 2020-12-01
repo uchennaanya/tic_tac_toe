@@ -103,6 +103,12 @@ This project is [MIT](https://github.com/uchennaanya/Tic-Tac-Toe/blob/feature/LI
 - Twitter: [@martinsanya19](https://twitter.com/martinsanya19)
 - LinkedIn: [uchenna Anya](https://www.linkedin.com/in/uchenna-anya)
 
+👤 **Arrey Tabe**
+
+- Github: [ArreyTabe](https://github.com/ArreyTabe)
+- Twitter: [@tabe_arrey](https://twitter.com/tabe_arrey)
+- LinkedIn: [Arrey Affuembey](https://www.linkedin.com/in/arrey-affuembey-80a8b11a8/)
+
 ## Acknowledgments
 
 - [Ruby-doc](https://ruby-doc.org/core-2.6.5)

@@ -25,10 +25,10 @@ class Interface
 
   def welcome_title
     puts <<-HEREDOC
-      -------------How to Play------------------------
+      -------------How to Play--------------------------------
       The 1st player is represented by X, the 2nd player is O.
       Each chooses numbers from 1 to 9 to select desired cell
-      ------------------------------------------------
+      --------------------------------------------------------
     HEREDOC
   end
 
@@ -99,7 +99,7 @@ class Interface
         puts 'the game is a tie, try again'
         break
       end
-      
+
       display_board(@board)
       active_player = active_player == @player1 ? @player2 : @player1
     end

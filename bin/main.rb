@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/logic.rb'
+require_relative '../lib/logic'
 
 # disable: Metrics/MethodLength
 
 class Interface
   attr_accessor :gamelogic
+
+  private
+
   def initialize
     self.gamelogic = GameLogic.new
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -25,10 +28,10 @@ class Interface
 
   def welcome_title
     puts <<-HEREDOC
-      -------------How to Play------------------------
+      -------------How to Play--------------------------------
       The 1st player is represented by X, the 2nd player is O.
       Each chooses numbers from 1 to 9 to select desired cell
-      ------------------------------------------------
+      --------------------------------------------------------
     HEREDOC
   end
 
@@ -78,21 +81,23 @@ class Interface
     puts "#{@player1} will be using 'X', while #{@player2} will be using 'O'"
   end
 
+  public
+
   def play
+    info
+
     display_board(@board)
+
     active_player = @player1
     loop do
       puts "#{active_player}: Choose a poistion"
-
       position = gets.chomp.to_i
       position = validate_position(position, @board)
-
       @board[position - 1] = active_player == @player1 ? 'X' : 'O'
-
       if gamelogic.win?(@board)
         display_board(@board)
-        puts 'Congratulations!'
-        puts "#{active_player} is the winner!"
+
+        puts "Congratulations! #{active_player} is the winner!"
         break
       elsif gamelogic.draw?(@board)
         display_board(@board)
@@ -107,8 +112,6 @@ class Interface
 end
 
 interface = Interface.new
-
-interface.info
 interface.play
 
 # enable: Metrics/MethodLength

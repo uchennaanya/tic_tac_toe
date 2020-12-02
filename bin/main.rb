@@ -8,6 +8,7 @@ class Interface
   attr_accessor :gamelogic
 
   private
+
   def initialize
     self.gamelogic = GameLogic.new
     @board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -15,7 +16,6 @@ class Interface
     @player2 = nil
   end
 
-  private
   def display_board(_board)
     puts <<-HEREDOC
       #{@board[0]} | #{@board[1]} | #{@board[2]}
@@ -26,7 +26,6 @@ class Interface
     HEREDOC
   end
 
-  private
   def welcome_title
     puts <<-HEREDOC
       -------------How to Play--------------------------------
@@ -36,7 +35,6 @@ class Interface
     HEREDOC
   end
 
-  private
   def validate_name(name)
     loop do
       break unless name.strip == ''
@@ -47,7 +45,6 @@ class Interface
     name
   end
 
-  private
   def player_name
     puts 'Player 1 please your name:'
     @player1 = gets.chomp
@@ -58,7 +55,6 @@ class Interface
     [@player1, @player2]
   end
 
-  private
   def validate_position(position, board)
     loop do
       break if (1..9).include?(position) && !board[position - 1].is_a?(String)
@@ -73,7 +69,6 @@ class Interface
     position
   end
 
-  private
   def info
     welcome_title
 
@@ -87,8 +82,8 @@ class Interface
   end
 
   public
+
   def play
-    info
     display_board(@board)
     active_player = @player1
     loop do
@@ -117,6 +112,7 @@ class Interface
 end
 
 interface = Interface.new
-interface.play
 
-# enable: Metrics/MethodLength
+interface.info
+
+interface.play

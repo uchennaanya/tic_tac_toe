@@ -84,20 +84,20 @@ class Interface
   public
 
   def play
+    info
+
     display_board(@board)
+
     active_player = @player1
     loop do
       puts "#{active_player}: Choose a poistion"
-
       position = gets.chomp.to_i
       position = validate_position(position, @board)
-
       @board[position - 1] = active_player == @player1 ? 'X' : 'O'
-
       if gamelogic.win?(@board)
         display_board(@board)
-        puts 'Congratulations!'
-        puts "#{active_player} is the winner!"
+
+        puts "Congratulations! #{active_player} is the winner!"
         break
       elsif gamelogic.draw?(@board)
         display_board(@board)
@@ -112,7 +112,6 @@ class Interface
 end
 
 interface = Interface.new
-
-interface.info
-
 interface.play
+
+# enable: Metrics/MethodLength

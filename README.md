@@ -42,7 +42,7 @@ This project requires to complete the following milestones:
 
 ### Built With
 
-- [Ruby](https://www.ruby-lang.org/en/)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
 
 ## Live Demo
 
